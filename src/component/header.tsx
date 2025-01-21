@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../assets/icons/logo+hamburger.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";

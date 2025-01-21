@@ -1,4 +1,3 @@
-import React from "react";
 import footballIcon from "../assets/icons/Football-icon.svg";
 
 export const NavItem = () => {
