@@ -27,14 +27,16 @@ export const InfoSection = ({
                 className
             )}
         >
-            <h1
-                className={clsx(
-                    "uppercase font-medium w-fit m-auto lg:m-0 pb-4",
-                    { "pt-4 pl-4": !isPadding }
-                )}
-            >
-                {title}
-            </h1>
+            {title && (
+                <h1
+                    className={clsx(
+                        "uppercase font-medium w-fit m-auto lg:m-0 pb-4",
+                        { "pt-4 pl-4": !isPadding }
+                    )}
+                >
+                    {title}
+                </h1>
+            )}
             <div className="">{content}</div>
         </div>
     );
