@@ -1,8 +1,9 @@
 import { TransferHistoryItem } from "./transfer-history-item";
 
-export const TransferHistory = () => {
+export type TransferHistory = { className?: string };
+export const TransferHistory = ({ className }: TransferHistory) => {
     return (
-        <div>
+        <div className={className}>
             <TransferHistoryItem />
             <TransferHistoryItem />
             <TransferHistoryItem />
