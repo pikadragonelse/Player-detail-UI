@@ -6,20 +6,26 @@ export type InfoSection = {
     content?: ReactNode;
     isClearStyleOnMobile?: boolean;
     isPadding?: boolean;
+    className?: string;
 };
 export const InfoSection = ({
     title,
     content,
     isClearStyleOnMobile,
     isPadding,
+    className,
 }: InfoSection) => {
     return (
         <div
-            className={clsx({
-                "bg-[#020C20] lg:rounded-lg": isClearStyleOnMobile,
-                "bg-[#020C20] rounded-lg": !isClearStyleOnMobile,
-                "p-4": isPadding,
-            })}
+            className={clsx(
+                "bg-[#020C20]",
+                {
+                    "lg:rounded-lg": isClearStyleOnMobile,
+                    "rounded-lg": !isClearStyleOnMobile,
+                    "p-4": isPadding,
+                },
+                className
+            )}
         >
             <h1
                 className={clsx(

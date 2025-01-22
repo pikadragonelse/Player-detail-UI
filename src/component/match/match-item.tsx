@@ -1,4 +1,4 @@
-import { MatchTeam } from "../../model/match-team";
+import { MatchTeamUI } from "../../model/team";
 import GeorgiaIcon from "../../assets/icons/Georgia.png";
 import SpainIcon from "../../assets/icons/Spain.svg";
 import BenchIcon from "../../assets/icons/bench.svg";
@@ -6,8 +6,8 @@ import BenchIcon from "../../assets/icons/bench.svg";
 export type MatchItem = {
     date?: string;
     time?: string;
-    homeTeam: MatchTeam;
-    awayTeam: MatchTeam;
+    homeTeam: MatchTeamUI;
+    awayTeam: MatchTeamUI;
 };
 export const MatchItem = () => {
     return (

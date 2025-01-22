@@ -1,7 +1,6 @@
 import logo from "../assets/icons/logo+hamburger.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { NavItem } from "./nav-item";
+import UserIcon from "../assets/icons/user.svg";
 export const Header = () => {
     return (
         <header className="flex flex-col justify-between bg-gradient-to-r from-[#203397] via-[#122690] to-[#091557] relative">
@@ -17,10 +16,7 @@ export const Header = () => {
                 </div>
                 <div className="">
                     <div className="p-3 lg:p-4 rounded-full bg-[#02020F26]">
-                        <FontAwesomeIcon
-                            icon={faUser}
-                            className="text-white w-3 h-3 lg:w-4 lg:h-4 block"
-                        />
+                        <img src={UserIcon} alt="" />
                     </div>
                 </div>
             </div>
