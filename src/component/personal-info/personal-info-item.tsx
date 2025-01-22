@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 export type PersonalInfoItem = {
     title?: string;
-    description?: string;
+    description?: string | number | null;
     subDescription?: string;
     icon?: string;
     className?: string;
@@ -33,7 +33,7 @@ export const PersonalInfoItem = ({
                     <img src={icon} alt="" />
                 </div>
                 <div className={clsx("relative", { "-mt-1": subDescription })}>
-                    <p className="text-sm">{description}</p>
+                    <p className="text-sm">{description ?? "--"}</p>
                     <p className="text-xs text-[#AAAAAA] font-normal absolute">
                         {subDescription}
                     </p>
