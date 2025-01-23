@@ -13,5 +13,6 @@ export interface Category {
     name: string;
     slug: string;
     id: string;
-    sport: Sport;
+    sport?: Sport;
+    flag?: string;
 }
