@@ -1,13 +1,24 @@
-export const convertTimestampToDate = (timestamp: number) => {
+export const convertTimestampToDate = (
+    timestamp: number,
+    type: "default" | "short" = "default"
+) => {
     const date = new Date(timestamp * 1000);
 
-    const day = date.getDate();
-    const month = date
-        .toLocaleString("en-US", { month: "short" })
-        .toUpperCase();
+    let day = date.getDate().toString();
+    if (Number(day) < 10) {
+        day = "0" + day;
+    }
+    let month = date.toLocaleString("en-US", { month: "short" }).toUpperCase();
+    if (type === "short") {
+        if (date.getMonth() < 10) {
+            month = "0" + date.getMonth().toString();
+        } else {
+            month = date.getMonth().toString();
+        }
+    }
     const year = date.getFullYear();
 
-    return `${day} ${month} ${year}`;
+    return type === "default" ? `${day} ${month} ${year}` : `${day}/${month}`;
 };
 
 export const convertTimestampToAge = (timestamp: number) => {
