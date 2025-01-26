@@ -1,2 +1,3 @@
 Run project: 
-**yarn dev**
+- **yarn install**
+- **yarn dev**
